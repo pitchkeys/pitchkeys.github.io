@@ -1,0 +1,187 @@
+#mainLink{
+    display: flex;
+    width: 30%;
+    margin-left: 2%;
+    text-decoration: none;
+}
+
+#main{
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    width: 102%;
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-top: -1%;
+    display: flex;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+    
+    font-family: 'IBM Plex Sans', sans-serif;
+    
+}
+
+#bigTitle{
+    display: block;
+    font-size: 3.00vw;
+    color: white;
+    margin-bottom: 0;
+    margin-top: -1%;
+    padding-top: 0;
+    padding-bottom:1%;
+    
+}
+
+#subTitle{
+    display: block;
+    font-size: 1.6vw;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom:0;
+    opacity: 0.8;
+    font-style: italic;
+    
+}
+
+#right{
+    margin-left: 5%;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+
+#mainImage{
+    width: 18%;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%
+}
+
+#otherLinkHolder{
+    width: 45%;
+    margin-left: 18%;
+    display: flex;
+}
+
+.topLinks{
+    display: block;
+    width: 33.3%;
+
+    color: white;
+    font-size: 2.00vw;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+#gradient{
+    width: 102%;
+    height: 8px;
+    margin-left: -1%;
+}
+
+#main{
+    display: block;
+    display: flex;
+}
+
+#portrait-main{
+    display: none;
+}
+
+/*PORTRAIT BREAK POINT*/
+
+#portrait-main-link{
+    width: 50%;
+    display: flex;
+    height: auto;
+   
+
+}
+
+#portrait-menu{
+    font-size: 4vw;
+    color: white;
+    font-family: 'IBM plex sans', sans-serif;
+    width: 27.5%;
+    padding: 1.35vw;
+    margin-left: 20vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-user-select: none;
+    border: 1px solid black;
+}
+
+#portrait-menu:hover{
+    border: 1px solid white;
+    cursor: pointer;
+    
+}
+
+.portrait-menu-links:hover{
+    color: black;
+    background-color: grey;
+}
+
+#portrait-menu-list{
+    position: absolute;
+    border: 1px solid white;
+    background-color: black;
+    margin-left: 71.2%;
+    width: 30%;
+ 
+    z-index: 999;
+}
+
+.portrait-menu-links{
+    display: block;
+    font-size: 4vw;
+    color: white;
+    padding: 5% 5% 5% 5%;
+}
+
+
+
+@media only screen and (orientation: portrait){
+    #main{
+        display: none;
+        
+    }
+
+    #portrait-main{
+        display: block;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+        margin-top: -2%;
+    }
+
+    #bigTitle{
+        font-size: 5vw;
+        margin-top: -3%;
+        text-decoration: none;
+        
+    }
+
+    #subTitle{
+        font-size: 3vw;
+        margin-top: -1%;
+        text-decoration: none;
+    }
+
+    #gradient{
+        height: 3px;
+        position: relative;
+    }
+
+    
+}

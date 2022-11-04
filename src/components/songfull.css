@@ -1,0 +1,414 @@
+#songTitle{
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 0 5% 0 5%;
+    width: 90%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#songDescription{
+    display: block;
+    font-size: 1.75vw;
+    opacity: 0.8;
+    text-align: center;
+    margin: 0 5% 0 5%;
+    color: white;
+    width: 90%;
+}
+
+.downloadLinkContainer{
+
+    color: white;
+    display: flex;
+    width: 90%;
+    
+    margin: 2% 0 2% 5%;
+    padding: 1% 0 1% 0;
+}
+
+.thumbnail{
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    filter: brightness(0.8);
+}
+.downloadLink{
+    width: 45%;
+    font-size: 1.75vw;
+    color: white;
+    display: block;
+    margin-right: 5%;
+    text-align: center;
+    padding-top: 1.25%;
+    padding-bottom: 1.25%;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    
+    opacity: 0.85;
+ 
+}
+
+#inner-thumbnail-holder{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    visibility:hidden;
+    font-weight: bold;
+
+}
+
+
+#thumbnail-holder:hover #inner-thumbnail-holder{
+    visibility:visible;
+}
+
+#thumbnail-holder:hover .thumbnail{
+    filter: brightness(0.4);
+}
+
+#thumbnail-holder{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#thumbnail-link{
+    font-size: 1.5vw;
+}
+
+.downloadLink:hover{
+    
+    
+    border: 2px solid white;
+}
+
+u{
+    display: inline-block;
+    font-size: 2vw;
+    margin-bottom: 10%;
+}
+
+.downloadCount{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.downloadAs{
+    font-size: 2.75vw;
+    color: white;
+    margin-left: 5%;
+    padding-top: 0;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+    
+    margin-right: 5%;
+    font-weight: bold;
+    
+}
+
+.similarSongs{
+    margin-left: 5.7%;
+    margin-right: 45%;
+    font-weight: bold;
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+    font-size: 4vw;
+}
+
+.mainBodyImg{
+    width: 200%;
+    text-align: center;
+    margin-left: -50%;
+    
+}
+
+#downloadDiv{
+    display: flex;
+    margin-left: 0;
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+
+    border: 1px solid grey;
+    box-shadow: 0 0 15px #474747;
+    background-color: black;
+}
+
+#downloadLeft{
+    width: 65%;
+    
+}
+
+#downloadRight{
+    width: 35%;
+    margin-top: 2%;
+}
+
+.infoPanelBig{
+    font-size: 2.5vw;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding-top: 0;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 3% 0 3% 0;
+    border: none;
+    font-weight: bold;
+}
+
+.infoPanel{
+    display: flex;
+    font-size: 1.5vw;
+    color: white;
+ 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.attribute{
+    width: 40%;
+    padding: 0;
+    margin: 0 0 0 5%;
+
+}
+
+.attributeValue{
+    width: 55%;
+    margin-left: 5%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #ababab;
+    font-weight: bold;
+    padding-right: 2%;
+    /*font-family: 'Mulish', sans-serif;*/
+    opacity: 0.7;
+}
+
+.ratingsDivFull{
+    display: flex;
+    font-size: 1.65vw;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0.9;
+    color: white;
+}
+
+.barFull{
+    margin-left: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border: 1px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.numberFull{
+    padding-left: 3.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-weight: bold;
+    font-size: 1.65vw;
+}
+
+#ratingTextFull{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.65vw
+}
+
+#numRatingsFull{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    font-size: 1.65vw
+}
+
+#reviewForm, #reviewSelector{
+    font-size: 1.65vw;
+}
+
+
+
+.choice, #reviewSelector{
+    font-family: 'Mulish', sans-serif;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.choice:hover{
+    background-color: orange;
+}
+
+.choice{
+    font-weight: bold;
+}
+
+#submitRating{
+    background-color: black;
+    padding: 0.5% 2% 0.5% 2%;
+    border: 2px solid white;
+    border-radius: 0;
+    font-size: 1.65vw;
+    margin-left: 5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#reviewForm{
+    margin-left: 5%;
+    margin-top: 4%;
+    opacity: 0.9;
+}
+
+#reviewSelector{
+    margin-left: 3%;
+    margin-bottom: 1.5%;
+    outline: none;
+    font-weight: bold;
+}
+
+#firstRate{
+    margin-left: 0;;
+    color: white;
+    font-size: 2.25vw;
+
+    opacity: 0.85;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 3%;
+}
+
+#thanksMsg{
+    font-size: 1.65vw;
+    color: white;
+    margin-left: 5%;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+#reportLink{
+    font-size: 1.65vw;
+    color: white;
+    margin-left: 5%;
+}
+
+#creditText{
+    font-size: 1.5vw;
+    color: white;
+    margin-left: 5%;
+}
+
+.audioPlayer{
+    outline: none;
+    border-radius: 0;
+    margin-left: 5%;
+    width: 50%;
+}
+
+.creditLinks{
+    font-size: 1.5vw;
+    margin-left: 0%;
+    color: white;
+}
+
+li{
+
+    margin: 2% 0% 2% 5%;
+    list-style-type: "✲";
+    
+}
+
+#creditBulletHolder{
+    margin-left: 2.5%;
+    padding: 0;
+}
+
+#ytLinkHolder{
+    font-size: 1.5vw;
+    margin-left: 2.5%;
+}
+
+#ytLink{
+    margin-left: 2.5%;
+    color: white;
+}
+
+@media only screen and (orientation: portrait){
+    #downloadDiv{
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+
+        border: none;
+    }
+
+    #downloadLeft, #downloadRight{
+        width: 100%;
+        margin: 0;
+    }
+
+    #downloadRight{
+        margin-top: 10%;
+    }
+
+    #songTitle, .infoPanelBig{
+        font-size: 6vw;
+        padding-top: 7%;
+    }
+
+    #songDescription, #reportLink{
+        font-size: 3.5vw;
+    }
+
+    .downloadAs{
+        font-size: 5.5vw;
+    }
+
+    .downloadLink{
+        font-size: 4vw;
+        width: 50%;
+        padding: 2%;
+    }
+
+    .downloadCount{
+        font-size: 4.5vw;
+    }
+
+    .audioPlayer{
+        width: 90%;
+        margin-top: 2.5%;
+    }
+
+    #ytLinkHolder{
+        font-size: 3vw;
+    margin-left: 0;
+    }
+
+    .ratingsDivFull, .barFull, .numberFull, #ratingTextFull, #numRatingsFull, #reviewForm, .choice, #reviewSelector, #submitRating, .infoPanel, #thumbnail-text{
+        font-size: 4vw;
+    }
+
+    .ratingsDivFull{
+        width: 70%;
+    }
+
+    #reviewForm, .ratingsDivFull{
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+}
+
+

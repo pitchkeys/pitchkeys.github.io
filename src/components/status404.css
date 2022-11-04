@@ -1,0 +1,44 @@
+#f{
+    -webkit-background-clip: text;
+	background-clip: text;
+    color: transparent;
+    font-size: 8vw;
+    text-align: center;
+    opacity: 1;
+    font-weight: bold;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 2%;
+}
+
+#explanation{
+    font-size: 2.5vw;
+    color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+code{
+    background-color: #3f4042;
+    padding: 0.5%;
+}
+
+.errorLink{
+    font-size: 2.5vw;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+#searchPreviewer404{
+    position: absolute;
+    border: 1px solid white;
+    margin: 0% 22% 0 22%;
+    width: 58%;
+    background-color: black;
+    z-index: 999;
+    max-height: 300px;
+    overflow-y: auto;
+}

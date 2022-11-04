@@ -1,0 +1,259 @@
+#mainText{
+    color: white;
+    
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    width: 102%;
+    margin-left: -1%;
+    
+}
+
+body::selection{
+    background-color: orange;
+}
+
+#topImg{
+    opacity: 0.25;
+    width: 125%;
+    margin-left: -12.5%;
+}
+
+#mainTextCenter{
+    color: white;
+    font-size: 7vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#subTextCenter{
+    opacity: 0.75;
+    font-size: 2.75vw;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+#searchBar{
+
+    width: 57%;
+    margin-left: 20%;
+    font-size: 3vw;
+    
+    background-color: transparent;
+    font-family: 'IBM Plex Sans', sans-serif;
+   
+    padding-left: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    transition: 0.5s;
+    border-radius: 50px;
+ 
+    outline: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+ 
+}
+
+#form{
+    display: flex;
+    width: 60%;
+    margin-left: 20%;
+}
+
+#submit{
+    width: 20%;
+    
+    background: transparent;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3vw;
+    transition: 0.5s;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#submit:hover{
+
+    cursor: pointer;
+
+}
+
+#mainDisplayComponents{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+}
+
+#mainDisplay{
+    position:relative;
+}
+
+#nextLine{
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+
+#playRandom{
+    font-size: 2vw;
+    color: white;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: underline;
+    border: transparent;
+    transition: 0.5s;
+}
+
+#playRandom:hover{
+    cursor: pointer;
+}
+
+#form{
+    margin-top: 5%;
+}
+
+.uploadHeader{
+    font-size: 5vw;
+    font-weight: bold;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    margin: 0;
+    border-bottom-right-radius: 3vw;
+    background-color: black;
+}
+
+.uploadHeaderGradient{
+    width: 41%;
+    margin-left: 7.5%;
+    font-weight: bold;
+    padding: 0 0.6% 0.6% 0;
+    border-bottom-right-radius: 3.3vw;
+    margin-bottom: 4%;
+    margin-top: 5%;
+}
+
+.breakGradient{
+    height: 10px;
+}
+
+#asOfNow{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+
+
+.viewSwitcher, .viewSwitcherOption, .viewSwitcherSelector{
+    font-size: 2vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    outline: none;
+}
+
+.viewSwitcher{
+    margin-left: 78.3%;
+    margin-bottom: 2%;
+    margin-top: 0;
+}
+
+.viewBy{
+    margin-right: 4%;
+}
+
+.viewSwitcherSelector, .viewSwitcherOption{
+    padding: 0.5% 2% 0.5% 2%;
+}
+
+#searchPreviewer{
+    position: absolute;
+    border: 1px solid white;
+    margin: -7.2% 22% 0 22%;
+    width: 58%;
+    background-color: black;
+    z-index: 999;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.individualSearchPrediction{
+    font-size: 2vw;
+    display: block;
+    padding: 2% 0 2% 2%;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.individualSearchPrediction:hover{
+    background-color: grey;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media only screen and (orientation: portrait){
+    #mainTextCenter{
+        font-size: 10vw;
+        line-height: 1.15;
+    }
+
+
+    #subTextCenter{
+        font-size: 4vw;
+        width: 80%;
+        margin-left: 10%;
+        opacity:1;
+    }
+    
+    #topImg{
+        width: 270%;
+        margin-left: -60%;
+    }
+
+    #searchBar{
+        box-sizing: border-box;
+        font-size: 5vw;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-weight: bold;
+    }
+
+    .uploadHeaderGradient{
+        box-sizing: border-box;
+        width: 70%;
+        margin-left: 15%;
+        padding: 0 0.9% 0.9% 0.9%;
+        border-bottom-left-radius: 3vw;
+    }
+    
+    .uploadHeader{
+        font-size: 7vw;
+        text-align: center;
+        border-bottom-left-radius: 3vw;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 2%;
+    }
+
+    .viewSwitcher{
+        display: none;
+    }
+    
+
+   
+}

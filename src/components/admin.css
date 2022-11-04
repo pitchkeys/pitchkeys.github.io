@@ -1,0 +1,35 @@
+label{
+    color: white;
+}
+
+.box{
+    font-size: 2.1vw;
+    width: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0.5%;
+}
+
+h1{
+    margin-left: 5%;
+    font-size: 2.5vw
+}
+
+.inputBox{
+    height: 30px;
+    width: 30px;
+    margin-left: 4%;
+}
+
+.inputText{
+    font-size: 1.5vw;
+    margin-left: 0.5%;
+    
+}
+
+#create{
+    font-size: 2.1vw;
+    padding: 0.5%;
+}

@@ -1,0 +1,44 @@
+#outerGradient{
+    padding: 0.7vw;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#container{
+    margin: 3% 5% 5% 5%;
+}
+
+#innerGradient{
+    background-color: black;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    position: relative;
+}
+
+#text{
+    color: white;
+    font-size: 4vw;
+    padding-top: 0;
+    padding-bottom: 5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+  
+}
+
+#description{
+    font-size: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0.8;
+    font-family: 'Titillium Web', sans-serif;
+}

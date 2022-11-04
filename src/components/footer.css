@@ -1,0 +1,176 @@
+#footerImage{
+    width: 10%;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#footerLink{
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    justify-content: center;
+}
+
+#footerBigTitle{
+    font-size: 5vw;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+#footerSubTitle{
+    font-size: 2.5vw;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+#footerRight{
+    color: white;
+    text-decoration: none;
+    margin-left: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#footerDescription{
+    font-size: 1.8vw;
+    color: white;
+    margin: 0 10% 0 10%;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+#bottomLinkHolder{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.bottomLinks{
+    display: block;
+    font-size: 2vw;
+    
+    text-decoration: underline;
+    opacity: 0.85;
+    transition: 0.5s;
+    margin-top: 0.4%;
+    margin-bottom: 0.4%;
+}
+
+.bottomLinks:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#bottomLinkHolderLeft{
+    border-right: 2px solid white;
+    padding-right: 5%;
+}
+
+#bottomLinkHolderRight, #bottomLinkHolderLeft{
+    width: 30%;
+    
+}
+
+#bottomLinkHolderRight{
+    padding-left: 5%;
+}
+
+.directory{
+    font-size: 2.5vw;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+#copyright{
+    font-size: 2vw;
+    padding: 1.5% 0 1.5% 0;
+    color: white;
+    background-color: #454037;
+    margin: 4% 0 -2% 0;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.copyrightLink{
+    color: white;
+}
+
+#footerLine{
+    height: 10px;
+}
+
+@media only screen and (orientation: portrait){
+    #footerImage{
+        width: 12.5%;
+    }
+
+    #footerBigTitle{
+        font-size: 6vw;
+    }
+
+    #footerSubTitle{
+        font-size: 3vw;
+    }
+
+    #footerLine{
+        height: 2px;
+        margin-top: 5%;
+    }
+
+    #footerLink{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    #footerDescription{
+        font-size: 3vw;
+        opacity: 0.7
+    }
+
+    #bottomLinkHolder{
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #bottomLinkHolderLeft, #bottomLinkHolderRight{
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    #bottomLinkHolderLeft{
+        margin-bottom: 5%;
+    }
+
+    .directory{
+        font-size: 5vw;
+        
+    }
+
+    .bottomLinks{
+        font-size: 4vw;
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    #copyright{
+        font-size: 3.5vw;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
