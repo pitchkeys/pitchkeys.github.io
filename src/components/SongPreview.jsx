@@ -202,7 +202,7 @@ class SongPreview extends Component {
                                         <p id = "angledBracket" ><b>&gt;</b></p>
                                     </div>
                                     <div id = "flex-song-preview-right"> 
-                                        <Link to = {this.props.generatedLink} className = 'link' target = "_blank" onMouseEnter = {() => this.displayGradient()}
+                                        <Link to = {this.props.generatedLink} className = 'link' onMouseEnter = {() => this.displayGradient()}
                                         onMouseLeave = {() => this.removeGradient()}
                                         style = {this.state.showGradient}>{this.props.songname}</Link>
                                         <p className = 'songDesc'>{this.props.desc}</p>
@@ -248,7 +248,7 @@ class SongPreview extends Component {
             <div style = {this.getView()[1]} className = "portrait-outer-container">{/*start of portrait preview*/}
                 {<img src={this.props.coverImage} alt="" className = "portrait-thumbnail"/>}
                 <div className = "portrait-outer-link-holder">
-                    <Link to = {this.props.generatedLink} className = 'portrait-link' target = "_blank" onMouseEnter = {() => this.displayGradient()}
+                    <Link to = {this.props.generatedLink} className = 'portrait-link'  onMouseEnter = {() => this.displayGradient()}
                     onMouseLeave = {() => this.removeGradient()}
                     style = {this.state.showGradient}>{this.props.songname}</Link>
                 </div>
