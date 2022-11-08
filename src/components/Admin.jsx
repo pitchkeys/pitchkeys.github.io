@@ -70,7 +70,7 @@ class Admin extends Component {
             }
         }
         console.log("Info is: " + JSON.stringify(info));
-        return fetch('https://pitchkeys-api.herokuapp.com/add', {
+        return fetch('https://blue-clean-eel.cyclic.app/add', {
             method: 'POST',
             body: JSON.stringify(info),
             headers: {

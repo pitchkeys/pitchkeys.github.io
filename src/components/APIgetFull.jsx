@@ -8,7 +8,7 @@ export default function APIgetFull(props){
     const [time, updateTime] = React.useState("");
 
     React.useEffect(() => {
-        fetch('https://pitchkeys-api.herokuapp.com/api/songs/')
+        fetch('https://blue-clean-eel.cyclic.app/api/songs/')
         .then(res => res.text())
         .then(data => {updateData(JSON.parse(data))})
 

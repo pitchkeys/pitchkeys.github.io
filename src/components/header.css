@@ -101,7 +101,7 @@ body{
 /*PORTRAIT BREAK POINT*/
 
 #portrait-main-link{
-    width: 50%;
+    width: 60%;
     display: flex;
     height: auto;
    
@@ -112,9 +112,9 @@ body{
     font-size: 4vw;
     color: white;
     font-family: 'IBM plex sans', sans-serif;
-    width: 27.5%;
+    width: 22.5%;
     padding: 1.35vw;
-    margin-left: 20vw;
+    margin-left: 15vw;
     margin-top: auto;
     margin-bottom: auto;
     -webkit-user-select: none;
@@ -122,7 +122,7 @@ body{
 }
 
 #portrait-menu:hover{
-    border: 1px solid white;
+ 
     cursor: pointer;
     
 }
@@ -157,23 +157,33 @@ body{
         
     }
 
+    #mainImage{
+        width: 21%;
+    }
+
+    #right, #bigTitle, #subTitle, #portrait-main-link{
+        text-decoration: none;
+    }
+
     #portrait-main{
         display: block;
         display: flex;
         width: 100%;
         text-decoration: none;
-        margin-top: -2%;
+        margin-top: -1%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 
     #bigTitle{
-        font-size: 5vw;
+        font-size: 6vw;
         margin-top: -3%;
         text-decoration: none;
         
     }
 
     #subTitle{
-        font-size: 3vw;
+        font-size: 3.5vw;
         margin-top: -1%;
         text-decoration: none;
     }

@@ -42,7 +42,7 @@ class Home extends Component {
     }
 
     componentDidUpdate(){
-        fetch('https://pitchkeys-api.herokuapp.com/api/songs').then(res => res.text())
+        fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
             .then(data => {
                 let processedData = JSON.parse(data)
                 //calculate number of "hits" based on keywords
@@ -168,20 +168,22 @@ class Home extends Component {
                 <div id = 'mainDisplay'>
                     <img src="https://easymath.github.io/download-test/2020-08-05%20(3).png" alt="" id = 'topImg'/>
                     <div id = 'mainDisplayComponents'>
-                        <p id = 'mainTextCenter'>{/*Give credit to YourSaviorBagel for helping w/freeway*/} Testing Trae Gaming N Food UPDATED!!!!11!</p>
+                        <p id = 'mainTextCenter'>{/*Give credit to YourSaviorBagel for helping w/freeway*/} The PitchKeys Website</p>
                         <p id = 'subTextCenter' style={{color: this.state.color2}}>I create piano covers and impossible piano remixes of various popular songs.</p>
                         
                         <input autocomplete="off" type="text" id = "searchBar" placeholder = "Search for a song..." name = "searchQuery" style={{backgroundImage: "linear-gradient(to right, " + this.state.color1 + ", " + this.state.color2 + ")", border: "2px solid " + this.state.color1, caretColor: this.state.color1}} onChange = {(e) => this.onChangeSearch(e)} />
+
+                        <div style = {{display: this.determineSearchPredictorVisibility(), border: "2px solid " + this.state.color1}} id = "searchPreviewer">
+                    {this.state.searchResults.map (c => 
+                        <Link to = {"/music" + c.generatedLink} target = "_blank" className = 'individualSearchPrediction'>{c.songname}</Link>
+                    )}
+                </div>
                         
                         <audio id = 'myAudio' src="https://easymath.github.io/download-test/PreludeinG.mp3" type="audio/mpeg"></audio>
                     </div>
                 </div>
 
-                <div style = {{display: this.determineSearchPredictorVisibility(), border: "2px solid " + this.state.color1}} id = "searchPreviewer">
-                    {this.state.searchResults.map (c => 
-                        <Link to = {"/music" + c.generatedLink} target = "_blank" className = 'individualSearchPrediction'>{c.songname}</Link>
-                    )}
-                </div>
+                
 
                 <div className = 'uploadHeaderGradient' style={{backgroundImage: "linear-gradient(10deg, " + this.state.color2 + ", " + this.state.color1 + ")"}}>
                     <p className = 'uploadHeader' style={this.getUploadStyle()}>Popular Uploads</p>

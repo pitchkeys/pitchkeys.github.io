@@ -23,7 +23,7 @@ class Status404 extends Component {
     }
 
     componentDidUpdate(){
-        fetch('https://pitchkeys-api.herokuapp.com/api/songs').then(res => res.text())
+        fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
             .then(data => {
                 let processedData = JSON.parse(data)
                 //calculate number of "hits" based on keywords

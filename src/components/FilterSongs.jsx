@@ -37,7 +37,7 @@ class FilterSongs extends Component {
             "&numRatings=" + this.props.filters.numericalFilters[4].moreThan + "," + this.props.filters.numericalFilters[4].lessThan + 
             "&order=" + this.props.filters.type + "," + this.props.filters.order)*/
 
-            fetch('https://pitchkeys-api.herokuapp.com/search?types=' + 
+            fetch('https://blue-clean-eel.cyclic.app/search?types=' + 
             this.props.filters.types.join("") + 
             "&files=" + this.props.filters.files.join("") + 
             "&noteCount=" + this.props.filters.numericalFilters[0].moreThan + "," + this.props.filters.numericalFilters[0].lessThan + 
@@ -177,7 +177,7 @@ class FilterSongs extends Component {
                 }
             })
         }else{
-            fetch('https://pitchkeys-api.herokuapp.com/api/songs').then(res => res.text())
+            fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
             .then(data => {
                 this.setState({
                     incoming: JSON.parse(data)

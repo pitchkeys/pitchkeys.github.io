@@ -6,7 +6,7 @@ function APIget(props){
     const [view, updateView] = React.useState({})
 
     React.useEffect(() => {
-        fetch('https://pitchkeys-api.herokuapp.com/api/songs/' + props.type + "/" + props.count)
+        fetch('https://blue-clean-eel.cyclic.app/api/songs/' + props.type + "/" + props.count)
         .then(res => res.text())
         .then(data => {updateData(JSON.parse(data))})
 
