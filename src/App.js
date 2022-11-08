@@ -22,10 +22,10 @@ function App() {
         <Header firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>
        
           <Routes>
-            <Route path = "/" element = {<Home firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
-            <Route path = "/admin" element = {<Admin />}></Route>
-            <Route path = "/music/:id" element = {<SongFull firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
-            <Route path = "/music" element = {<Search firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            <Route path = "/#/" element = {<Home firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            <Route path = "/#/admin" element = {<Admin />}></Route>
+            <Route path = "/#/music/:id" element = {<SongFull firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            <Route path = "/#/music" element = {<Search firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "*" element = {<Status404 firstCol = {colorsList[1]} secondCol = {colorsList[0]}/>}></Route>
           </Routes>
           
