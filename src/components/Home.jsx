@@ -168,7 +168,7 @@ class Home extends Component {
                 <div id = 'mainDisplay'>
                     <img src="https://easymath.github.io/download-test/2020-08-05%20(3).png" alt="" id = 'topImg'/>
                     <div id = 'mainDisplayComponents'>
-                        <p id = 'mainTextCenter'>{/*Give credit to YourSaviorBagel for helping w/freeway*/} The PitchKeys website</p>
+                        <p id = 'mainTextCenter'>{/*Give credit to YourSaviorBagel for helping w/freeway*/} Testing Trae Gaming N Food UPDATED!!!!11!</p>
                         <p id = 'subTextCenter' style={{color: this.state.color2}}>I create piano covers and impossible piano remixes of various popular songs.</p>
                         
                         <input autocomplete="off" type="text" id = "searchBar" placeholder = "Search for a song..." name = "searchQuery" style={{backgroundImage: "linear-gradient(to right, " + this.state.color1 + ", " + this.state.color2 + ")", border: "2px solid " + this.state.color1, caretColor: this.state.color1}} onChange = {(e) => this.onChangeSearch(e)} />

@@ -77,6 +77,7 @@ class SongFull extends Component {
                 }
             })
         }else{
+            console.log('https://pitchkeys-api.herokuapp.com/api/songs/' + window.location.href.substring(window.location.href.length-7))
             fetch('https://pitchkeys-api.herokuapp.com/api/songs/' + window.location.href.substring(window.location.href.length-7)).then(res => res.text()).then(data => 
             {
                 let x = JSON.parse(data);
