@@ -9,7 +9,7 @@ class FilterSongs extends Component {
     } 
 
     changeView(e){
-        if(e.target.value == "grid"){
+        if(e.target.value === "grid"){
             this.setState({
                 display: {display: "grid", gridTemplateColumns: "33% 33% 33%", width: "90%", marginLeft: "7.5%"},
                 view: "grid"
@@ -60,7 +60,7 @@ class FilterSongs extends Component {
                     processedData.forEach(e => {
                         let hits = 0;
                         splitArray.forEach(s => {
-                            if(splitArray.indexOf(s) == splitArray.length-1){
+                            if(splitArray.indexOf(s) === splitArray.length-1){
                                 //runs if this is the last one
                                 e.keywords.forEach(k => {
                                     if (k.includes(s)){
@@ -78,7 +78,7 @@ class FilterSongs extends Component {
 
                 //process this array
                 for(let i = 0; i < relevanceArray.length; i++){
-                    if(relevanceArray[i] == 0){
+                    if(relevanceArray[i] === 0){
                         relevanceArray.splice(i, 1);
                         processedData.splice(i, 1);
                         i--;
@@ -95,15 +95,15 @@ class FilterSongs extends Component {
 
                 console.log(processedData)
                             
-                if(this.props.filters.type == "relevance" || this.props.filters.type == "numRatings" || this.props.filters.type == "rating" || this.props.filters.type == "download"){
+                if(this.props.filters.type === "relevance" || this.props.filters.type === "numRatings" || this.props.filters.type == "rating" || this.props.filters.type == "download"){
                     let sortingOrder = this.props.filters.order
                     let tempArr = [];
                     let type = ""
-                    if (this.props.filters.type == "numRatings"){
+                    if (this.props.filters.type === "numRatings"){
                         processedData.forEach(e => {
                             tempArr.push(e.stats.ratings.length);
                         })
-                    }else if (this.props.filters.type == "rating"){
+                    }else if (this.props.filters.type === "rating"){
                         processedData.forEach(e => {
                             let sum = 0;
                             if(e.stats.ratings.length > 0){
@@ -115,23 +115,23 @@ class FilterSongs extends Component {
                                 tempArr.push(0)
                             }
                         })
-                    }else if (this.props.filters.type == "download"){
+                    }else if (this.props.filters.type === "download"){
                         processedData.forEach(e => {
                             let downloads = 0;
                             let keys = Object.keys(e.stats).slice(1);
                             keys.forEach(f => {
-                                if (e.stats[f] && f != "visits"){
+                                if (e.stats[f] && f !== "visits"){
                                     downloads+=parseInt(e.stats[f])
                                 }
                             })
                             tempArr.push(downloads);
                         })
 
-                    }else if (this.props.filters.type == "relevance"){ 
+                    }else if (this.props.filters.type === "relevance"){ 
                         tempArr = relevanceArray
                     }
 
-                    if(JSON.stringify(insertionSort(sortingOrder)) != JSON.stringify(this.state.incoming)){
+                    if(JSON.stringify(insertionSort(sortingOrder)) !== JSON.stringify(this.state.incoming)){
                         console.log("Data is: " + insertionSort(sortingOrder) + " | and");
                         this.setState({incoming: insertionSort(sortingOrder)})
                     }
@@ -157,7 +157,7 @@ class FilterSongs extends Component {
                             tempArr[minPos] = t
                         }
                             
-                        if(sort == -1){
+                        if(sort === -1){
                             //console.log("is reversing")
                             for(let i = 0; i< processedData.length/2; i++){
                                 let tempData = processedData[i];

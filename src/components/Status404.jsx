@@ -106,7 +106,7 @@ class Status404 extends Component {
                 </div>
                 <p id = "explanation">Hmm... the page that you requested <code style={{color: this.props.firstCol}}>{window.location.href.substring(window.location.href.lastIndexOf("/"))}</code> wasn't found or doesn't exist.</p>
 
-                <input autocomplete="off" type="text" id = "searchBar" placeholder = "Search something instead..." name = "searchQuery" style={{color: "white", border: "1px solid white", caretColor: this.state.color1, fontSize: "2.5vw"}} onChange = {(e) => this.onChangeSearch(e)} />
+                <input autoComplete="off" type="text" id = "searchBar" placeholder = "Search something instead..." name = "searchQuery" style={{color: "white", border: "1px solid white", caretColor: this.state.color1, fontSize: "2.5vw"}} onChange = {(e) => this.onChangeSearch(e)} />
 
                 <div style = {{display: this.determineSearchPredictorVisibility(), border: "2px solid " + this.state.color1}} id = "searchPreviewer404">
                     {this.state.searchResults.map (c => 

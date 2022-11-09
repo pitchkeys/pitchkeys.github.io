@@ -87,8 +87,6 @@
 
 .containerRight{
     width: 100%;
-
-
 }
 
 #hidden-div-song-preview{
@@ -234,12 +232,12 @@ audio{
 .portrait-outer-container{
     color: white;
     background-color: #2b2b2b;
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 10%;
+    width: 80%;
     /*box-shadow: 5px 5px 15px #474747;*/
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    margin-bottom: 15%;
+    margin-bottom: 0%;
 }
 
 .portrait-outer-link-holder{
