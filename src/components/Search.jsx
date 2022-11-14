@@ -22,8 +22,24 @@ class Search extends Component {
         display: {display: "block"},
         filter: "relevance",
         order: -1,
-        searchQuery: ''
+        searchQuery: '',
+        matches: window.matchMedia("(orientation: landscape)").matches,
+        filterOpened: false,
+        filterOpenedText: 'Open Filters'
     } 
+
+    componentDidMount(){//totally did not copy and paste this from stack overflow!
+        const handler = e => this.setState({matches: e.matches})
+        window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
+    }
+
+    filterVisibility(){
+        if(this.state.matches || this.state.filterOpened){
+            return {display: "block"}
+        }else{
+            return {display: "none"}
+        }
+    }
 
     getSongTypes(){
         let arr = []
@@ -109,6 +125,21 @@ class Search extends Component {
         })
     }
 
+    updateMobileVisibility(){
+        this.setState({
+            filterOpened: !this.state.filterOpened
+        })
+        if(this.state.filterOpened){
+            this.setState({
+                filterOpenedText: "Open filters"
+            })
+        }else{
+            this.setState({
+                filterOpenedText: "Close filters"
+            })
+        }
+    }
+
     updateNumericalFiltersVisibility(e){
         let index = e.currentTarget.id.substring(6)
         let c = this.state.numericalFiltersVisibility;
@@ -151,9 +182,11 @@ class Search extends Component {
 
     render() { 
         return (
-            <div>  
+            <div>
+ 
                 <div id = "mainSearch">
-                    <div id = "searchTypesList" /*style={{height: window.innerHeight + "px"}}*/>
+
+                    <div id = "searchTypesList" /*style={{height: window.innerHeight + "px"}}*/ style = {this.filterVisibility()}>
                         <div className = "flexNumericalInput">
                         <label htmlFor="" className = "inequality">Sort by...</label>
                         <select className = "appliedNumericalFiltersInput" onChange = {(e) => this.changeCriteria(e)}>
@@ -187,7 +220,7 @@ class Search extends Component {
                             </div>
                         )}
                         </div>
-                        <p id = "filterConstraints">Applied: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.getSongTypes()}</span></p>
+                        <p className = "filterConstraints">Applied: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.getSongTypes()}</span></p>
 
                         <div className = "appliedNumericalFilters" style = {{borderLeft: "2px solid " + this.props.firstCol, color: this.props.firstCol}} onClick = {() => this.updateNormalFiltersVisibility(1)}>Files available</div>
                         <div className = "detailed" style = {this.getNormalFiltersVisibility(1)}>
@@ -198,7 +231,7 @@ class Search extends Component {
                             </div>
                         )}
                         </div>
-                        <p id = "filterConstraints">Applied: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.getFileTypes()}</span></p>
+                        <p className = "filterConstraints">Applied: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.getFileTypes()}</span></p>
 
                         <p className = "filtersHeader1">Customize range</p>
                         {this.state.numericalFilters.map(f=> (
@@ -230,13 +263,15 @@ class Search extends Component {
                                     onChange = {(e) => this.changeNumericalFilters(e, this.state.numericalFilters.indexOf(f))}/>
                                 </div>          
                             </div>
-                            <p id = "filterConstraints">Range: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.state.numericalFilters[this.state.numericalFilters.indexOf(f)].moreThan + "-" + this.state.numericalFilters[this.state.numericalFilters.indexOf(f)].lessThan}</span></p>
+                            <p className = "filterConstraints">Range: <span style={{fontWeight: "bold", color: this.props.secondCol}}>{this.state.numericalFilters[this.state.numericalFilters.indexOf(f)].moreThan + "-" + this.state.numericalFilters[this.state.numericalFilters.indexOf(f)].lessThan}</span></p>
                             </div>
                         ))}
                     </div>
-                    
-                    <div style = {{width: "75%"}} id = "outer">
+                    <div id = "filterOpener" onClick={() => this.updateMobileVisibility()}>{this.state.filterOpenedText}</div>
+                    <div id = "outer">
                         
+                        {/*this.state.matches && (<h1 style={{color: 'white', fontSize: '10vw'}}>Big Screen</h1>)}
+                        {!this.state.matches && (<h3 style={{color: 'white', fontSize: '10vw'}}>Small Screen</h3>)*/}
                         <input type="text" placeholder={'Search a keyword'} id = "mainSearchBar" name = "q" onChange = {(e) => this.updateSearch(e)}/>
                         
                         <FilterSongs 

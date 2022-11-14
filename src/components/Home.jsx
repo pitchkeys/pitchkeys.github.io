@@ -197,7 +197,7 @@ class Home extends Component {
                     </div>
     
                 
-                <APIget count = "3" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
+                <APIget count = "15" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
 
                 {/*<div className = 'breakGradient' style={{backgroundImage: "linear-gradient(10deg, " + this.state.color2 + ", " + this.state.color1 + ")"}}></div>*/}
 

@@ -2,7 +2,7 @@
 import Home from './components/Home'
 import Admin from './components/Admin'
 import SongFull from './components/SongFull';
-import {Routes, Route, HashRouter} from "react-router-dom"
+import {Routes, Route} from "react-router-dom"
 import Header from './components/Header';
 import Footer from './components/Footer';
 import React from 'react';
@@ -14,7 +14,7 @@ function App() {
   React.useEffect(() => {
     updateColor(['lightseagreen', "#c29500"])
   })*/
-  let colorsList = ['#00bbff', "#70b509"];
+  let colorsList = ['#c2bc17', "#1ec9be"];
   
 
   return (

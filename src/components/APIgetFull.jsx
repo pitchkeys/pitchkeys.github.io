@@ -3,8 +3,8 @@ import IndivStats from "./IndivStats";
 
 export default function APIgetFull(props){
     const [incomingDataFull, updateData] = React.useState([]);
-    const [sum, updateSum] = React.useState("");
-    const [time, updateTime] = React.useState("");
+    const [sum, updateSum] = React.useState("Fetching...");
+    const [time, updateTime] = React.useState("Fetching...");
 
     React.useEffect(() => {
         console.log('why isn\'t this api working')
@@ -27,7 +27,7 @@ export default function APIgetFull(props){
     },[incomingDataFull])
     
     return(
-        <div style={{display: "flex", justifyContent: "center"}}>
+        <div style={{display: "flex", width: "85%", marginLeft: "7.5%", justifyContent: "center"}}>
             <IndivStats desc = "songs uploaded" stat = {incomingDataFull.length} color1 = {props.color1} color2 = {props.color2}/>
             <IndivStats desc = "notes transcribed" stat = {sum.toLocaleString("en-US")} color1 = {props.color1} color2 = {props.color2}/>
             <IndivStats desc = "total duration" stat = {time} color1 = {props.color1} color2 = {props.color2}/>

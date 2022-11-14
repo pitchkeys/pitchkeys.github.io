@@ -56,12 +56,15 @@ class APIget extends Component{
     state = {
         incomingData: [],
         view: {},
+        matches: window.matchMedia("(orientation: landscape)").matches
     }
 
     componentDidMount(){
+        const handler = e => this.setState({matches: e.matches})
+        window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
         if(this.props.view == "grid"){
             this.setState({
-                view: {width: "90%", marginLeft: "5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
+                view: {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
             })
            
         }else{
@@ -78,12 +81,13 @@ class APIget extends Component{
             })
         })
     }
+
     componentDidUpdate(){
         console.log('updated');
         if(this.props.view == "grid"){
-            if(JSON.stringify(this.state.view)!= JSON.stringify({width: "90%", marginLeft: "5%", display: "grid", gridTemplateColumns: "33% 33% 33% "})){
+            if(JSON.stringify(this.state.view)!= JSON.stringify({width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "})){
                 this.setState({
-                    view: {width: "90%", marginLeft: "5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
+                    view: {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
                 })
             }  
         }else{
@@ -95,9 +99,21 @@ class APIget extends Component{
         }
     }
 
+    returnGridFormat(){
+        if(this.state.matches){
+            if(this.props.view == "grid"){
+                return {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
+            }else{
+                return {width: "100%", display: "block"}
+            }
+        }else{
+            return{width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "100% "}
+        }
+        
+    }
     render(){
         return(
-        <div style = {this.state.view}>
+        <div style = {this.returnGridFormat()}>
             {this.state.incomingData.map(s => (
                 <SongPreview coverImage = {s.download.coverImage}
                 view = {this.props.view}
