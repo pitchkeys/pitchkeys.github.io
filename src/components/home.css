@@ -87,7 +87,7 @@ body::selection{
 
 #mainDisplay{
     position:relative;
-    margin-bottom: -2%;
+    margin-bottom: 2%;
 }
 
 #nextLine{
@@ -132,7 +132,7 @@ body::selection{
     font-weight: bold;
     padding: 0 0 0.6% 0;
   
-    margin: 5% 30% 5% 30%;
+    margin: 1% 30% 5% 30%;
 }
 
 .breakGradient{
@@ -180,7 +180,7 @@ body::selection{
 #searchPreviewer{
     position: absolute;
     border: 1px solid white;
-    margin: -3.9% 22.5% 0 22.5%;
+    margin: -8% 22.5% 0 22.5%;
     width: 57%;
     background-color: black;
     z-index: 999;
@@ -236,14 +236,15 @@ body::selection{
 
     .uploadHeaderGradient{
         box-sizing: border-box;
-        width: 60%;
-        margin-left: 20%;
-        padding: 0 0% 0.9% 0%;
-      
+        width: 70%;
+        margin-left: 15%;
+        padding: 0 0% 1.2% 0%;
+        margin-bottom: 7%;
+        margin-top: 5%;
     }
     
     .uploadHeader{
-        font-size: 7vw;
+        font-size: 8vw;
         text-align: center;
 
         margin: 0;
@@ -259,7 +260,7 @@ body::selection{
         position: absolute;
         width: 81.6%;
         box-sizing: border-box;
-        margin: -12.8% 10.17% 0 10.17%;
+        margin: -16.5% 10.17% 0 10.17%;
         max-height: 200px;
     }
 

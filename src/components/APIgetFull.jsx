@@ -1,5 +1,6 @@
 import React from "react";
 import IndivStats from "./IndivStats";
+import "./APIgetFull.css"
 
 export default function APIgetFull(props){
     const [incomingDataFull, updateData] = React.useState([]);
@@ -27,7 +28,7 @@ export default function APIgetFull(props){
     },[incomingDataFull])
     
     return(
-        <div style={{display: "flex", width: "85%", marginLeft: "7.5%", justifyContent: "center"}}>
+        <div style={{display: "flex", width: "85%", marginLeft: "7.5%", justifyContent: "center"}} id = "statsDiv">
             <IndivStats desc = "songs uploaded" stat = {incomingDataFull.length} color1 = {props.color1} color2 = {props.color2}/>
             <IndivStats desc = "notes transcribed" stat = {sum.toLocaleString("en-US")} color1 = {props.color1} color2 = {props.color2}/>
             <IndivStats desc = "total duration" stat = {time} color1 = {props.color1} color2 = {props.color2}/>

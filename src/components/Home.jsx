@@ -14,7 +14,8 @@ class Home extends Component {
         incoming: [],
         view: "grid",
         fullSongList: "",
-        searchResults: []
+        searchResults: [],
+        matches: window.matchMedia("(orientation: landscape)").matches
     } 
 
     playRandom() {
@@ -30,6 +31,8 @@ class Home extends Component {
 
     componentDidMount(){
         document.title = "Home | PitchKeys"
+        const handler = e => this.setState({matches: e.matches})
+        window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
         fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
             .then(data => {
                 console.log('fetching data...')
@@ -196,16 +199,17 @@ class Home extends Component {
                     </select>
                     </div>
     
-                
-                <APIget count = "15" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
+                <APIget count = "3" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
 
-                {/*<div className = 'breakGradient' style={{backgroundImage: "linear-gradient(10deg, " + this.state.color2 + ", " + this.state.color1 + ")"}}></div>*/}
+                {/*!this.state.matches && <APIget count = "6" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>*/}
 
                 <div className = 'uploadHeaderGradient' style={{backgroundImage: "linear-gradient(10deg, " + this.state.color2 + ", " + this.state.color1 + ")"}}>
                     <p className = 'uploadHeader' style={this.getUploadStyle()}>Recent uploads</p>
                 </div>  
 
                 <APIget count = "3" view = {this.state.view} type = "recent" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
+
+                {/*!this.state.matches && <APIget count = "6" view = {this.state.view} type = "recent" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>*/}
 
                 <p id = "asOfNow">As of now...</p>
 

@@ -62,17 +62,6 @@ class APIget extends Component{
     componentDidMount(){
         const handler = e => this.setState({matches: e.matches})
         window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
-        if(this.props.view == "grid"){
-            this.setState({
-                view: {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
-            })
-           
-        }else{
-            this.setState({
-                view: {width: "100%", display: "block"}
-            })
-        }
-
         fetch('https://blue-clean-eel.cyclic.app/api/songs/' + this.props.type + "/" + this.props.count)
         .then(res => res.text())
         .then(data => {
@@ -80,23 +69,6 @@ class APIget extends Component{
                 incomingData: JSON.parse(data)
             })
         })
-    }
-
-    componentDidUpdate(){
-        console.log('updated');
-        if(this.props.view == "grid"){
-            if(JSON.stringify(this.state.view)!= JSON.stringify({width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "})){
-                this.setState({
-                    view: {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
-                })
-            }  
-        }else{
-            if(JSON.stringify(this.state.view) != JSON.stringify({width: "100%", display: "block"})){
-            this.setState({              
-                    view: {width: "100%", display: "block"}
-                })
-            }
-        }
     }
 
     returnGridFormat(){
@@ -107,7 +79,7 @@ class APIget extends Component{
                 return {width: "100%", display: "block"}
             }
         }else{
-            return{width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "100% "}
+            return{width: "90%", marginLeft: "5%", display: "grid", gridTemplateColumns: "100% "}
         }
         
     }

@@ -267,7 +267,7 @@ class SongFull extends Component {
                             </li>
                         ))}
                         <p className = "downloadAs" style = {{color: this.props.firstCol, borderBottom: "3px solid "+ this.props.firstCol}}>Take a listen</p>
-                        <audio controls src= {"/media/" + this.state.incoming.download.audioLink} controlsList="nodownload noremoteplayback" className = "audioPlayer"></audio>
+                        <audio controls src= {"/media/" + this.state.incoming.download.audioLink} controlsList="nodownload noremoteplayback" className = "audioPlayer1"></audio>
                         <ul style = {{color: "white"}}>
                             <li id = "ytLinkHolder">
                                 <p id = "ytLink" style = {{color: "white"}}>Watch on YouTube: <a href={this.state.incoming.download.ytLink} style = {{color: this.props.secondCol}} target = "_blank">{this.state.incoming.download.ytLink}</a></p>

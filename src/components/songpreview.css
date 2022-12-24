@@ -215,13 +215,6 @@ button:hover{
 
 }
 
-audio{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-
-}
-
 .audioPlayer{
     width: 27.5%;
     margin-left: 0;
@@ -231,21 +224,21 @@ audio{
 
 .portrait-outer-container{
     color: white;
-    background-color: #2b2b2b;
+    background-color: /*#2b2b2b*/black;
     margin-left: 10%;
     width: 80%;
     /*box-shadow: 5px 5px 15px #474747;*/
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    margin-bottom: 0%;
+    margin-bottom: 10%;
 }
 
 .portrait-outer-link-holder{
-    height: 115px;
+    height: 80px;
 }
 
 .portrait-link{
-    font-size: 1.825vw;
+    font-size: 1.8vw;
     text-align: center;
     width: 95%;
     margin-left: 2.5%;
@@ -253,8 +246,8 @@ audio{
     display: block;
     font-weight: bold;
     text-decoration: none;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding-top: 4%;
+    padding-bottom: 1%;
     margin-top:-4%;
     position: relative;
     top: 50%;
@@ -266,10 +259,12 @@ audio{
     font-size: 100%;
     margin-bottom: -1%;
     opacity: 0.7;   
+    
 }
 
 .portrait-show-more{
-    border-top: 2px solid gray;
+    text-decoration: underline;
+    /*border-top: 2px solid gray;*/
     text-align: center;
     font-size: 110%;
     padding: 2% 0 2% 0;
@@ -361,14 +356,27 @@ audio{
 @media only screen and (orientation: portrait){
     .portrait-outer-container{
         margin-bottom: 10%;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .portrait-thumbnail{
+        width: 80%;
+        margin-left: 10%;
+        border-top: 7px solid white;
     }
 
     .portrait-outer-link-holder{
-        height: 70px;
+        height: auto;
     }
 
     .portrait-link{
-        font-size: 4.25vw;
+        font-size: 130%;
+        padding-top: 6%;
+        padding-bottom: 2%;
+        position: relative;
+        top: 0%;
+        transform: translateY(0%);
     }
 
     .portrait-show-more{
@@ -376,30 +384,40 @@ audio{
     }
 
     .portrait-description {
-        font-size: 3.25vw;
-        line-height: 1.3
+        font-size: 4vw;
+        line-height: 1.3;
+        width: 95%;
+        margin-left: 2.5%;
+        font-style: italic;
     }
 
     .portrait-rating-bar, .portrait-rating-numratings{
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .portrait-ratings-div{
         margin-top: 2%;
         width: 70%;
+        margin-left: 10%;
     }
 
     #portrait-rating-numRatings{
-        margin-left: 2%;
-        font-size: 3.4vw;
+        margin-left: 0%;
+        font-size: 5vw;
     }
 
     #portrait-misc-div{
-        font-size: 3.75vw;
+        font-size: 4vw;
+        margin-top: -1%;
     }
 
     #portrait-available-files, .portrait-span-box{
-        font-size: 3.25vw;
+        font-size: 3.5vw;
+    }
+
+    .outerGradient{
+        margin: 0;
+        font-size: 5vw;
     }
 }
 

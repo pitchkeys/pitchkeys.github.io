@@ -42,3 +42,23 @@
     opacity: 0.8;
     font-family: 'Titillium Web', sans-serif;
 }
+
+@media only screen and (orientation: portrait){
+    #outerGradient{
+        padding: 1.5%;
+    }
+
+    #innerGradient{
+        width: 40vw;
+        height: 40vw;
+        
+    }
+
+    #text{
+        font-size: 7vw;
+    }
+
+    #description{
+        font-size: 4vw;
+    }
+}

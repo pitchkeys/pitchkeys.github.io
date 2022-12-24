@@ -1,0 +1,9 @@
+#statsDiv{
+    flex-direction: row
+}
+@media only screen and (orientation: portrait){
+    #statsDiv{
+        flex-direction: column;
+    }
+    
+}

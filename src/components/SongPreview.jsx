@@ -185,7 +185,7 @@ class SongPreview extends Component {
 
     getView(){
         if(this.props.view == "grid"){
-            return [{display: "none"}, {display: "block", borderTop: "10px solid" + this.props.firstCol}]
+            return [{display: "none"}, {display: "block"}]
         }else{
             return [{display: "block"}, {display: "none"}]
         }
@@ -221,7 +221,7 @@ class SongPreview extends Component {
                                         <p id = 'numRatings1'>({this.props.stats.ratings.length})</p>
                                     </div>
                                     <div id = 'numDownloadsDiv'>
-                                        <div id = 'downloadIcon'>🡣</div>
+                                        <div id = 'downloadIcon'>↓</div>
                                         <p id = 'numDownloads'>{" " + this.getTotalDownloads()}</p>
                                     </div>
                                     <div id = 'numNotesDiv'>Uploaded: {new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(0, 6) + ", " + new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(6)}</div>
@@ -246,15 +246,17 @@ class SongPreview extends Component {
                 </div>
             </div>{/*end of landscape preview*/}
             <div style = {this.getView()[1]} className = "portrait-outer-container">{/*start of portrait preview*/}
-                {<img src={this.props.coverImage} alt="" className = "portrait-thumbnail"/>}
-                <div className = "portrait-outer-link-holder">
-                    <Link to = {this.props.generatedLink} className = 'portrait-link'  onMouseEnter = {() => this.displayGradient()}
+                {<img src={this.props.coverImage} alt="" className = "portrait-thumbnail" style = {{borderTop: "8px solid" + this.props.firstCol}}/> }
+                <div class = "portrait-outer-link-holder">
+                <Link to = {this.props.generatedLink} className = 'portrait-link'  onMouseEnter = {() => this.displayGradient()}
                     onMouseLeave = {() => this.removeGradient()}
                     style = {this.state.showGradient}>{this.props.songname}</Link>
                 </div>
+                    
+              
                 
                 {/*<p className = 'portrait-description'>{this.props.desc}</p>*/}
-                <p className = 'portrait-show-more'  onClick={() => this.showExtraInfo()}>Show More 🡢</p>
+                <p className = 'portrait-show-more'  onClick={() => this.showExtraInfo()}>Show More ></p>
                 <div id = "portrait-hidden-area" style = {this.getVisibility()}>
                     <p className = 'portrait-description'>{this.props.desc}</p>
                     {/*<audio controls src= {"/media/" + this.props.downloadInfo.audioLink} controlsList="nodownload noremoteplayback" className = "portrait-audio-player"></audio>*/}
@@ -266,7 +268,7 @@ class SongPreview extends Component {
                         <p id = 'portrait-rating-numRatings'>({this.props.stats.ratings.length})</p>
                     </div>
 
-                    <div id = "portrait-misc-div">{new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(0, 6) + ", " + new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(6)}&nbsp;&nbsp;|&nbsp;&nbsp;{"🡣 " + this.getTotalDownloads()}&nbsp;&nbsp;|&nbsp;&nbsp;🎹 = {this.props.noteCount.toLocaleString("en-US")}
+                    <div id = "portrait-misc-div">{new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(0, 6) + ", " + new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(6)}&nbsp;&nbsp;|&nbsp;&nbsp;{"⬇ " + this.getTotalDownloads()}&nbsp;&nbsp;|&nbsp;&nbsp;🎹 = {this.props.noteCount.toLocaleString("en-US")}
                     </div>
                     <div id = 'portrait-available-files'><acronym title = "MIDI (.mid, .midi) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[0]}}>{this.state.fileTypes[0]}</acronym>
 
