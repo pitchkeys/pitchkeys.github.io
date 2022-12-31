@@ -409,6 +409,16 @@ li{
         margin-top: 6%;
         margin-bottom: 6%;
     }
+
+    .creditLinks{
+        font-size: 3.5vw;
+        margin-left: 2%;
+        color: white;
+    }
+
+    .audioPlayer1{
+        width: 75%;
+    }
 }
 
 

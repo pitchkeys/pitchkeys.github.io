@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#colorPicker{
+  color: white;
+  font-size: 2vw;
+  padding: 0.1%;
+  border: 1px solid white;
+  background-color: black;
+  z-index: 999;
+  text-align: center;
+}
+
+#colorPickerMenu{
+  position: fixed;
+  transform: translate(-100%, -100%);
+  left: 100%;
+  top: 100%;
+  display: flex;
+  z-index: 999;
+  background-color: black;
+  width: 30%;
+  border: 2px solid white;
+}
+
+.colorInput{
+  font-size: 1.5vw;
+  width: 50%;
+}

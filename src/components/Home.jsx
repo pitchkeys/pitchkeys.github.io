@@ -53,11 +53,11 @@ class Home extends Component {
         //calculate number of "hits" based on keywords
         let splitArray = this.state.searchQuery.toLowerCase().split(" ")
         let relevanceArray = [];
-        if(splitArray.length > 0){
+        if(splitArray[0] !== ""){
             processedData.forEach(e => {
                 let hits = 0;
                 splitArray.forEach(s => {
-                    if(splitArray.indexOf(s) == splitArray.length-1){
+                    if(splitArray.indexOf(s) == splitArray.length-1&& (s != "")){
                         //runs if this is the last one
                         e.keywords.forEach(k => {
                             if (k.includes(s)){
@@ -70,6 +70,10 @@ class Home extends Component {
                     }
                 })
             relevanceArray.push(hits);
+            })
+        }else{
+            processedData.forEach(e => {
+                relevanceArray.push(1)
             })
         }
 
@@ -95,7 +99,7 @@ class Home extends Component {
         }
         
         for(let i = 0; i < relevanceArray.length; i++){
-            if(relevanceArray[i] == 0){
+            if(relevanceArray[i] === 0 || relevanceArray[i] < (Math.max(...relevanceArray)*0.1)){
                 relevanceArray.splice(i, 1);
                 processedData.splice(i, 1);
                 i--;
@@ -198,8 +202,11 @@ class Home extends Component {
                         <option value="row" className = "viewSwitcherOption">Row</option>
                     </select>
                     </div>
-    
-                <APIget count = "3" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
+                
+              
+                    <APIget count = "3" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>
+                
+                
 
                 {/*!this.state.matches && <APIget count = "6" view = {this.state.view} type = "popular" firstCol = {this.state.color1} secondCol = {this.state.color2} leftLine = {true}/>*/}
 

@@ -20,6 +20,15 @@ body::selection{
     margin-left: -12.5%;
 }
 
+.fetchingMsg{
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    opacity: 0.6;
+}
+
 #mainTextCenter{
     color: white;
     font-size: 6vw;

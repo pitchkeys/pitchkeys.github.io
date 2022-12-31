@@ -1,6 +1,6 @@
 .outerGradient{
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin-left: 2%;
+    margin-right: 2%;
     color: white;
     z-index: -1;
     margin-bottom: 5%;
@@ -74,7 +74,7 @@
     color: white;
     display: block;
     text-decoration: none;
-    font-size: 2.75vw;
+    font-size: 2.3vw;
     font-weight: bold;
     margin-top: 0;
     padding-top: 0;
@@ -299,6 +299,10 @@ button:hover{
     opacity: 0.8;
 }
 
+.portrait-rating-numRatings{
+    margin-left: 5%;
+}
+
 .portrait-rating-bar{
     width: 85%;
     height: auto;
@@ -321,8 +325,8 @@ button:hover{
 }
 
 .portrait-description{
-    width: 85%;
-    margin-left: 7.5%;
+    width: 95%;
+    margin-left: 2.5%;
     margin-top: 3%;
 }
 
@@ -371,7 +375,7 @@ button:hover{
     }
 
     .portrait-link{
-        font-size: 130%;
+        font-size: 110%;
         padding-top: 6%;
         padding-bottom: 2%;
         position: relative;
@@ -392,6 +396,7 @@ button:hover{
     }
 
     .portrait-rating-bar, .portrait-rating-numratings{
+
         font-size: 4vw;
     }
 
@@ -401,8 +406,8 @@ button:hover{
         margin-left: 10%;
     }
 
-    #portrait-rating-numRatings{
-        margin-left: 0%;
+    .portrait-rating-numRatings{
+        margin-left: 2%;
         font-size: 5vw;
     }
 

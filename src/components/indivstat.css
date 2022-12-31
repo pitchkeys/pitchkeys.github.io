@@ -61,4 +61,14 @@
     #description{
         font-size: 4vw;
     }
+
+    #container{
+        margin: 3% 23% 3% 23%;
+        
+    }
+
+    #asOfNow{
+        font-size: 7vw;
+        margin-bottom: 5%;
+    }
 }

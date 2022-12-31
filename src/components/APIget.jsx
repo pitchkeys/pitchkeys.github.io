@@ -76,36 +76,49 @@ class APIget extends Component{
             if(this.props.view == "grid"){
                 return {width: "85%", marginLeft: "7.5%", display: "grid", gridTemplateColumns: "33% 33% 33% "}
             }else{
-                return {width: "100%", display: "block"}
+                return {width: "75%", marginLeft: "12.5%", display: "block"}
             }
         }else{
             return{width: "90%", marginLeft: "5%", display: "grid", gridTemplateColumns: "100% "}
         }
         
     }
+
+    getFetchingMsgVisibility(){
+        if (this.state.incomingData.length == 0){
+            return {display: "block"}
+        }else{
+            return {display: "none"}
+        }
+    }
     render(){
         return(
-        <div style = {this.returnGridFormat()}>
-            {this.state.incomingData.map(s => (
-                <SongPreview coverImage = {s.download.coverImage}
-                view = {this.props.view}
-                generatedLink = {"/music" + s.generatedLink} 
-                songname = {s.songname} 
-                desc = {s.desc} 
-                duration = {s.duration} 
-                downloadInfo = {s.download} 
-                noteCount = {s.notecount} 
-                date = {s.date}
-                firstCol = {this.props.firstCol} 
-                secondCol = {this.props.secondCol}
-                stats = {s.stats}
-                leftLine = {this.props.leftLine}
-                format = "landscape"/>
-            ))}
-        </div>
+            <div>
+                <div className = "fetchingMsg" style = {this.getFetchingMsgVisibility()}>Fetching...</div>
+                <div style = {this.returnGridFormat()}>
+                {this.state.incomingData.map(s => (
+                    <SongPreview coverImage = {s.download.coverImage}
+                    view = {this.props.view}
+                    generatedLink = {"/music" + s.generatedLink} 
+                    songname = {s.songname} 
+                    desc = {s.desc} 
+                    duration = {s.duration} 
+                    downloadInfo = {s.download} 
+                    noteCount = {s.notecount} 
+                    date = {s.date}
+                    firstCol = {this.props.firstCol} 
+                    secondCol = {this.props.secondCol}
+                    stats = {s.stats}
+                    leftLine = {this.props.leftLine}
+                    format = "landscape"/>
+                ))}
+                </div>
+            </div>
+            
         )
     }
 }
 
 export default APIget;
 
+{/**/}

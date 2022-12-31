@@ -73,7 +73,7 @@ class SongPreview extends Component {
         let translatedArr = []
         for (let i = 0; i < arr.length; i++){
             if(arr[i]){
-                translatedArr.push('block')
+                translatedArr.push('inline-block')
             }else{
                 translatedArr.push('none')
             }
@@ -105,7 +105,7 @@ class SongPreview extends Component {
     getTotalDownloads(){
         let totalDownloads = 0;
         for (let i = 0; i < this.state.availability.length - 1; i++){
-            if(this.state.availability[i] == "block"){
+            if(this.state.availability[i] == "inline-block"){
                 totalDownloads+=parseInt(this.props.stats[this.state.ref[i]])
             }
         }
@@ -157,6 +157,14 @@ class SongPreview extends Component {
         this.setState({
             extrasHidden: !this.state.extrasHidden
         })
+    }
+
+    changeVisibility(){
+        if(this.state.extrasHidden){
+            return "Show More 🔽"
+        }else{
+            return "Show Less 🔼"
+        }
     }
 
     getVisibility(){
@@ -216,7 +224,7 @@ class SongPreview extends Component {
                                     <div className = 'ratingsDiv1'>
                                         <div id = 'ratingText1'>Rating:</div> 
                                         <div style={{backgroundColor: "black", border: "1px solid " + this.props.firstCol, width: "100%"}} className = 'bar1'>
-                                            <div style={{width: ((this.getRatings() / 5)*100) - 3.5 + "%", backgroundImage: "linear-gradient(90deg, " + this.props.firstCol + ", " + this.props.firstCol + ")", color: "white"}} className = "number1">{this.getRatings() + "/5.00"}</div>
+                                            <div style={{width: ((this.getRatings() / 5)*100) - 3.5 + "%", backgroundImage: "linear-gradient(90deg, " + this.props.firstCol + ", " + this.props.firstCol + ")", color: "white"}} className = "number1">{this.getRatings() + "/5"}</div>
                                         </div>
                                         <p id = 'numRatings1'>({this.props.stats.ratings.length})</p>
                                     </div>
@@ -246,42 +254,39 @@ class SongPreview extends Component {
                 </div>
             </div>{/*end of landscape preview*/}
             <div style = {this.getView()[1]} className = "portrait-outer-container">{/*start of portrait preview*/}
-                {<img src={this.props.coverImage} alt="" className = "portrait-thumbnail" style = {{borderTop: "8px solid" + this.props.firstCol}}/> }
+                {<img src={this.props.coverImage} alt="" className = "portrait-thumbnail" style = {{borderTop: "8px solid " + this.props.firstCol}}/> }
                 <div class = "portrait-outer-link-holder">
                 <Link to = {this.props.generatedLink} className = 'portrait-link'  onMouseEnter = {() => this.displayGradient()}
                     onMouseLeave = {() => this.removeGradient()}
                     style = {this.state.showGradient}>{this.props.songname}</Link>
                 </div>
-                    
-              
-                
+
                 {/*<p className = 'portrait-description'>{this.props.desc}</p>*/}
-                <p className = 'portrait-show-more'  onClick={() => this.showExtraInfo()}>Show More ></p>
+                <p className = 'portrait-show-more'  onClick={() => this.showExtraInfo()}>{this.changeVisibility()}</p>
                 <div id = "portrait-hidden-area" style = {this.getVisibility()}>
                     <p className = 'portrait-description'>{this.props.desc}</p>
                     {/*<audio controls src= {"/media/" + this.props.downloadInfo.audioLink} controlsList="nodownload noremoteplayback" className = "portrait-audio-player"></audio>*/}
                     <div className = 'portrait-ratings-div'>
                         <div style={{backgroundColor: "black", border: "1px solid " + this.props.firstCol}} className = 'portrait-rating-bar'>
 
-                        <div style={{width: ((this.getRatings() / 5)*100) - 3.5 + "%", backgroundImage: "linear-gradient(90deg, " + this.props.firstCol + ", " + this.props.secondCol + ")", color: "white"}} className = "portrait-rating-value">Rating: {this.getRatings() + "/5.00"}</div>
+                        <div style={{width: ((this.getRatings() / 5)*100) - 3.5 + "%", backgroundImage: "linear-gradient(90deg, " + this.props.firstCol + ", " + this.props.secondCol + ")", color: "white"}} className = "portrait-rating-value">{this.getRatings() + "/5"}</div>
                         </div>
-                        <p id = 'portrait-rating-numRatings'>({this.props.stats.ratings.length})</p>
+                        <p class = 'portrait-rating-numRatings'>({this.props.stats.ratings.length})</p>
                     </div>
 
                     <div id = "portrait-misc-div">{new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(0, 6) + ", " + new Date(parseInt(this.props.date)).toString().substring(4, 16).slice(6)}&nbsp;&nbsp;|&nbsp;&nbsp;{"⬇ " + this.getTotalDownloads()}&nbsp;&nbsp;|&nbsp;&nbsp;🎹 = {this.props.noteCount.toLocaleString("en-US")}
                     </div>
                     <div id = 'portrait-available-files'><acronym title = "MIDI (.mid, .midi) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[0]}}>{this.state.fileTypes[0]}</acronym>
 
-<acronym title = "Audio (.mp3, .flac) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[1]}}>{this.state.fileTypes[1]}</acronym>
+                    <acronym title = "Audio (.mp3, .flac) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[1]}}>{this.state.fileTypes[1]}</acronym>
 
-<acronym title = "Musescore file (.mscz) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[2]}}>{this.state.fileTypes[2]}</acronym>
+                    <acronym title = "Musescore file (.mscz) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[2]}}>{this.state.fileTypes[2]}</acronym>
 
-<acronym title = "Sheet Music (.pdf) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[3]}}>{this.state.fileTypes[3]}</acronym>
+                    <acronym title = "Sheet Music (.pdf) available" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[3]}}>{this.state.fileTypes[3]}</acronym>
 
-<acronym title = "Available on YouTube" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[4]}}>{this.state.fileTypes[4]}</acronym></div>
-                        
-                    
-                </div>
+                    <acronym title = "Available on YouTube" className = 'portrait-span-box' style={{backgroundColor: this.state.backgroundColors[0], display: this.state.availability[4]}}>{this.state.fileTypes[4]}</acronym>
+                </div> 
+            </div>
             </div>
             </div>
         );

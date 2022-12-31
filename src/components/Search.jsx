@@ -31,6 +31,7 @@ class Search extends Component {
     componentDidMount(){//totally did not copy and paste this from stack overflow!
         const handler = e => this.setState({matches: e.matches})
         window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
+        window.scrollTo(0, 0)
     }
 
     filterVisibility(){
@@ -113,9 +114,9 @@ class Search extends Component {
     changeNumericalFilters(e, index){
         let f = this.state.numericalFilters
         if (e.target.id == "from"){
-            f[index].moreThan = parseInt(e.target.value);
+            f[index].moreThan = parseFloat(e.target.value);
         }else if (e.target.id == "to"){
-            f[index].lessThan = parseInt(e.target.value);
+            f[index].lessThan = parseFloat(e.target.value);
         }else{
             f[index].order = e.target.value;
         }
@@ -185,7 +186,7 @@ class Search extends Component {
             <div>
  
                 <div id = "mainSearch">
-
+                    <div id = "filterOpener" onClick={() => this.updateMobileVisibility()}>{this.state.filterOpenedText}</div>
                     <div id = "searchTypesList" /*style={{height: window.innerHeight + "px"}}*/ style = {this.filterVisibility()}>
                         <div className = "flexNumericalInput">
                         <label htmlFor="" className = "inequality">Sort by...</label>
@@ -205,8 +206,8 @@ class Search extends Component {
                         <div className = "flexNumericalInput">
                         <label htmlFor="order" className = "inequality">Order</label>
                         <select className = "appliedNumericalFiltersInput" onChange = {(e) => this.changeOrder(e)}>
-                            <option value = {1} selected>Ascending</option>
-                            <option value = {-1}>Descending</option>
+                            <option value = {1} >Ascending</option>
+                            <option value = {-1} selected>Descending</option>
                         </select>
                         </div>
 
@@ -241,8 +242,9 @@ class Search extends Component {
                             <div className = "detailed" style = {this.getVisibility(this.state.numericalFilters.indexOf(f))}>
                                 <div className = "flexNumericalInput">
                                     <p className = "inequality">From</p>
-                                    <input 
+                                    <input
                                     type="number" 
+                                    step="any"
                                     className = "appliedNumericalFiltersInput" 
                                     id = "from"
                                     value = {f.moreThan} 
@@ -255,6 +257,7 @@ class Search extends Component {
                                     <p className = "inequality">To</p>
                                     <input 
                                     type="number" 
+                                    step="any"
                                     className = "appliedNumericalFiltersInput" 
                                     value = {f.lessThan } 
                                     id = "to"
@@ -267,7 +270,7 @@ class Search extends Component {
                             </div>
                         ))}
                     </div>
-                    <div id = "filterOpener" onClick={() => this.updateMobileVisibility()}>{this.state.filterOpenedText}</div>
+                    
                     <div id = "outer">
                         
                         {/*this.state.matches && (<h1 style={{color: 'white', fontSize: '10vw'}}>Big Screen</h1>)}

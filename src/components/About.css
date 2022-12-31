@@ -1,0 +1,79 @@
+.fullText{
+    color: white;
+}
+
+.bodyText{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 2vw;
+    line-height: 1.3
+}
+
+.bodyTextHeader{
+    margin-left: 15%;
+    font-size: 4vw;
+    
+}
+
+.block{
+    height: 8px;
+    margin-left: 15%;
+    width: 15%;
+}
+
+table, td{
+    border: 1px solid white;
+}
+
+table{
+    margin-left: 15%;
+    width: 65%;
+}
+
+td{
+    padding: 1%;
+    font-size: 1.6vw;
+}
+
+.chartHeader{
+    font-size: 2vw;
+}
+
+@media only screen and (orientation: portrait){
+    .bodyText{
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 4vw;
+        line-height: 1.3
+    }
+    
+    .bodyTextHeader{
+        margin-left: 5%;
+        font-size: 6.5vw;
+        
+    }
+    
+    .block{
+        height: 4px;
+        margin-left: 5%;
+        width: 30%;
+    }
+    
+    table, td{
+        border: 1px solid white;
+    }
+    
+    table{
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    td{
+        padding: 1%;
+        font-size: 4vw;
+    }
+    
+    .chartHeader{
+        font-size: 4.5vw;
+    }
+}

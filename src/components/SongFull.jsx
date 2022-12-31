@@ -251,9 +251,9 @@ class SongFull extends Component {
         return (
             <div>
                 <Status404 firstCol = {this.props.secondCol} secondCol = {this.props.firstCol} display = {this.state.status404}/>
+                {(this.state.incoming.songname == "Fetching...") && <center className = "fetchingMsg">Fetching...</center>}
                 
-                {/*<img src={this.state.incoming.download.coverImage} className = "mainBodyImg"/>*/}
-                <div id = 'downloadDiv' style = {this.state.page}>
+                {<div id = 'downloadDiv' style = {this.state.page}>
                     <div id = "downloadLeft">
                         <p id = 'songTitle' style = {this.state.titleDisplay}>Download <span style={{color: this.props.firstCol}}> "{this.state.incoming.songname}"</span></p>
                         <p id = 'songDescription' style = {this.state.titleDisplay}>{this.state.incoming.desc}</p>
@@ -263,7 +263,7 @@ class SongFull extends Component {
                             <li className='downloadLinkContainer'>
                                 <a href = {"/media/" + this.state.incoming.download[a]}  className = "downloadLink" style={{backgroundColor: this.props.secondCol}} onClick = {(e) => this.updateDownloadCount(e)} id = {a} download>{this.state.display[a][0]}</a> 
 
-                                <div className = "downloadCount">({this.state.incoming.stats[this.state.display[a][1]]} <u className = 'downloadCount'>🡣</u>)</div>
+                                <div className = "downloadCount">({this.state.incoming.stats[this.state.display[a][1]]} <u className = 'downloadCount'>⬇</u>)</div>
                             </li>
                         ))}
                         <p className = "downloadAs" style = {{color: this.props.firstCol, borderBottom: "3px solid "+ this.props.firstCol}}>Take a listen</p>
@@ -307,20 +307,13 @@ class SongFull extends Component {
                     {/*Too lazy to use map method xD*/}
                     <div id = "downloadRight">
                         <p className = "infoPanelBig">Information</p>
-                        
                         <div id = "thumbnail-holder">
-                            
                             <img src={this.state.incoming.download.coverImage} alt="" className = "thumbnail"/>
                             <div id = "inner-thumbnail-holder">
                                 <p id = "thumbnail-text">Thumbnail</p>
-
                                 {/*<p id = "thumbnail-link">Copy thumbnail link</p*/}
-
                             </div>
-                            
                         </div>
-                        
-                        
 
                         <div className = "infoPanel">
                             <p className = "attribute">Tot. downloads</p>
@@ -357,7 +350,8 @@ class SongFull extends Component {
                             <p className = "attributeValue" style = {{color: this.props.secondCol}}>{this.getKeywords()}</p>
                         </div>
                     </div>
-                </div>
+                    
+                </div>}
                 {/*<p className = "similarSongs" style = {{color: this.props.firstCol, borderBottom: "3px solid "+ this.props.firstCol, display: this.state.page.display}} >Similar songs</p>
                 <div style={{width: "90%", marginLeft: "5%"}}>
                 <FilterSongs 
