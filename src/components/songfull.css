@@ -300,7 +300,7 @@ u{
 }
 
 #reportLink{
-    font-size: 125%;
+    font-size: 140%;
     color: white;
     margin-left: 5%;
 }
@@ -370,7 +370,7 @@ li{
     }
 
     #songDescription, #reportLink{
-        font-size: 3.5vw;
+        font-size: 3.75vw;
     }
 
     .downloadAs{

@@ -6,7 +6,16 @@
     margin-left: 15%;
     margin-right: 15%;
     font-size: 125%;
-    line-height: 1.3
+    line-height: 1.3;
+    color: white;
+}
+
+.indivList{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 125%;
+    line-height: 1.3;
+    color: white;
 }
 
 .bodyTextHeader{
@@ -39,6 +48,13 @@ td{
     font-size: 150%;
 }
 
+.bigText{
+    font-size: 200%;
+    color: white;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
 @media only screen and (orientation: portrait){
     .bodyText{
         margin-left: 5%;
@@ -46,6 +62,23 @@ td{
         font-size: 4vw;
         line-height: 1.3
     }
+
+    .bigText{
+        font-size: 5.5vw;
+        color: white;
+        margin-left: 5%;
+        font-weight: bold;
+    }
+
+    .indivList{
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 4vw;
+        line-height: 1.3;
+        color: white;
+    }
+    
+    
     
     .bodyTextHeader{
         margin-left: 5%;

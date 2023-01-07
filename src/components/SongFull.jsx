@@ -258,7 +258,7 @@ class SongFull extends Component {
                         <p id = 'songTitle' >Download <span style={{color: this.props.firstCol}}> "{this.state.incoming.songname}"</span></p>
                         <p id = 'songDescription'>{this.state.incoming.desc}</p>
                         <p className = "downloadAs" style = {{color: this.props.firstCol, borderBottom: "3px solid "+ this.props.firstCol}}>Download As...</p>
-                        <Link to = "./report" id = "reportLink">Report broken links</Link>
+                        <Link to = "/usage" id = "reportLink">Usage policy</Link>
                         {this.getValidFiles().map(a => (
                             <li className='downloadLinkContainer'>
                                 <a href = {"/media/" + this.state.incoming.download[a]}  className = "downloadLink" style={{backgroundColor: this.props.secondCol}} onClick = {(e) => this.updateDownloadCount(e)} id = {a} download>{this.state.display[a][0]}</a> 

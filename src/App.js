@@ -9,13 +9,15 @@ import React from 'react';
 import Search from './components/Search';
 import Status404 from './components/Status404';
 import About from './components/About';
+import Usage from './components/Usage'
+import Credits from './components/Credits';
 
 function App() {
   /*const [colorsList, updateColor] = React.useState([]);
   React.useEffect(() => {
     updateColor(['lightseagreen', "#c29500"])
   })*/
-  let colorsList = ["#c4ac25", 'lightseagreen'];
+  let colorsList = ['#cfb12b', "#cf2b7d"];
 
   
 
@@ -35,6 +37,8 @@ function App() {
             <Route path = "/" element = {<Home firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/admin" element = {<Admin />}></Route>
             <Route path = "/about" element = {<About firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            <Route path = "/usage" element = {<Usage firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            <Route path = "/credits" element = {<Credits firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/music/:id" element = {<SongFull firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/music" element = {<Search firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "*" element = {<Status404 firstCol = {colorsList[1]} secondCol = {colorsList[0]}/>}></Route>
