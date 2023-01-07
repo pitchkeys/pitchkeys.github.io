@@ -255,8 +255,8 @@ class SongFull extends Component {
                 
                 {<div id = 'downloadDiv' style = {this.state.page}>
                     <div id = "downloadLeft">
-                        <p id = 'songTitle' style = {this.state.titleDisplay}>Download <span style={{color: this.props.firstCol}}> "{this.state.incoming.songname}"</span></p>
-                        <p id = 'songDescription' style = {this.state.titleDisplay}>{this.state.incoming.desc}</p>
+                        <p id = 'songTitle' >Download <span style={{color: this.props.firstCol}}> "{this.state.incoming.songname}"</span></p>
+                        <p id = 'songDescription'>{this.state.incoming.desc}</p>
                         <p className = "downloadAs" style = {{color: this.props.firstCol, borderBottom: "3px solid "+ this.props.firstCol}}>Download As...</p>
                         <Link to = "./report" id = "reportLink">Report broken links</Link>
                         {this.getValidFiles().map(a => (

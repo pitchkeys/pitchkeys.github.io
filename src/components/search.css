@@ -3,7 +3,7 @@
     width: 100%;
     color: white;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2.75vw;
+    font-size: 200%;
     outline: none;
     padding: 0.5% 0% 0.5% 2.5%;
     border: 1px solid black;
@@ -15,7 +15,7 @@
 
 #query{
     width: 14.5%;
-    font-size: 2.5vw;
+    font-size: 200vw;
     border: 5px solid white;
     border-radius: 0;
     padding: 0.3%;
@@ -42,7 +42,7 @@
 }
 
 .inputText{
-    font-size: 1.5vw;
+    font-size: 115%;
     margin-left: 3%;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .filtersHeader1{
-    font-size: 3vw;
+    font-size: 175%;
     color: white;
     margin: 5% 0 5% 5%;
     font-weight: bold;
@@ -87,7 +87,7 @@
 
 #sortBy{
     color: white;
-    font-size: 3vw;
+    font-size: 100%;
     margin: 0;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -101,7 +101,7 @@
 
 .appliedNumericalFilters{
     padding: 0.5%;
-    font-size: 2.15vw;
+    font-size: 145%;
     color: white;
     margin-left: 6%;
     display: block;
@@ -126,7 +126,7 @@
 .inequality{
     color: white;
     width: 30%;
-    font-size: 1.75vw;
+    font-size: 100%;
     margin: 0;
     opacity: 1;
     margin-top: auto;
@@ -137,7 +137,7 @@
 .appliedNumericalFiltersInput{
     width: 60%;
     padding: 0;
-    font-size: 1.5vw;
+    font-size: 100%;
     margin-left: 3%;
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
@@ -158,11 +158,11 @@
 
 #numHits{
     margin: 1% 50% 3% 9.5%;
-    font-size: 2vw;
+    font-size: 150%;
 }
 
 #viewByText{
-    font-Size: 2vw;
+    font-Size: 150%;
     margin-Top: 1%;
     margin-Bottom: 3%;
 }
@@ -179,7 +179,7 @@
 
 .filterConstraints{
     color: white;
-    font-size: 1.2vw;
+    font-size: 80%;
     color: lightgray;
     margin-left: 6%;
     margin-top: 0%;

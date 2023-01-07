@@ -18,7 +18,7 @@
 
 #text{
     color: white;
-    font-size: 4vw;
+    font-size: 275%;
     padding-top: 0;
     padding-bottom: 5%;
     font-family: 'Quicksand', sans-serif;
@@ -36,7 +36,7 @@
 }
 
 #description{
-    font-size: 2vw;
+    font-size: 125%;
     margin-top: 0;
     margin-bottom: 0;
     opacity: 0.8;

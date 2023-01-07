@@ -1,5 +1,5 @@
 #songTitle{
-    font-size: 3vw;
+    font-size: 210%;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -11,7 +11,7 @@
 
 #songDescription{
     display: block;
-    font-size: 1.75vw;
+    font-size: 125%;
     opacity: 0.8;
     text-align: center;
     margin: 0 5% 0 5%;
@@ -37,7 +37,7 @@
 }
 .downloadLink{
     width: 45%;
-    font-size: 1.75vw;
+    font-size: 125%;
     color: white;
     display: block;
     margin-right: 5%;
@@ -58,7 +58,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3vw;
+    font-size: 150%;
     visibility:hidden;
     font-weight: bold;
 
@@ -91,19 +91,19 @@
 
 u{
     display: inline-block;
-    font-size: 2vw;
+    font-size: 150%;
     margin-bottom: 10%;
 }
 
 .downloadCount{
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 2vw;
+    font-size: 125%;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .downloadAs{
-    font-size: 2.75vw;
+    font-size: 190%;
     color: white;
     margin-left: 5%;
     padding-top: 0;
@@ -154,7 +154,7 @@ u{
 }
 
 .infoPanelBig{
-    font-size: 2.5vw;
+    font-size: 185%;
     text-align: center;
     width: 100%;
     color: white;
@@ -168,7 +168,7 @@ u{
 
 .infoPanel{
     display: flex;
-    font-size: 1.5vw;
+    font-size: 120%;
     color: white;
  
     margin-top: 3%;
@@ -198,7 +198,7 @@ u{
 
 .ratingsDivFull{
     display: flex;
-    font-size: 1.65vw;
+    font-size: 125%;
     width: 50%;
     margin-left: 5%;
     margin-top: auto;
@@ -221,24 +221,24 @@ u{
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     font-weight: bold;
-    font-size: 1.65vw;
+    font-size: 100%;
 }
 
 #ratingTextFull{
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 1.65vw
+    font-size: 100%;
 }
 
 #numRatingsFull{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 3%;
-    font-size: 1.65vw
+    font-size: 100%;
 }
 
 #reviewForm, #reviewSelector{
-    font-size: 1.65vw;
+    font-size: 115%;
 }
 
 
@@ -262,7 +262,7 @@ u{
     padding: 0.5% 2% 0.5% 2%;
     border: 2px solid white;
     border-radius: 0;
-    font-size: 1.65vw;
+    font-size: 115%;
     margin-left: 5%;
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -292,7 +292,7 @@ u{
 }
 
 #thanksMsg{
-    font-size: 1.65vw;
+    font-size: 150%;
     color: white;
     margin-left: 5%;
     font-style: italic;
@@ -300,13 +300,13 @@ u{
 }
 
 #reportLink{
-    font-size: 1.65vw;
+    font-size: 125%;
     color: white;
     margin-left: 5%;
 }
 
 #creditText{
-    font-size: 1.5vw;
+    font-size: 125%;
     color: white;
     margin-left: 5%;
 }
@@ -337,7 +337,7 @@ li{
 }
 
 #ytLinkHolder{
-    font-size: 1.5vw;
+    font-size: 125%;
     margin-left: 2.5%;
 }
 

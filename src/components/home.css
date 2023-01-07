@@ -16,13 +16,14 @@ body::selection{
 
 #topImg{
     opacity: 0.25;
-    width: 110%;
-    margin-left: -12.5%;
+    width: 110vw;
+    margin-left: -5%;
+
 }
 
 .fetchingMsg{
     color: white;
-    font-size: 4vw;
+    font-size: 250%;
     text-align: center;
     padding-top: 1%;
     padding-bottom: 5%;
@@ -31,7 +32,7 @@ body::selection{
 
 #mainTextCenter{
     color: white;
-    font-size: 6vw;
+    font-size: 400%;
     text-align: center;
     font-weight: bold;
     margin-top: 0;
@@ -39,8 +40,8 @@ body::selection{
 }
 
 #subTextCenter{
-    opacity: 0.75;
-    font-size: 2.5vw;
+    opacity: 0.9;
+    font-size: 175%;
     text-align: center;
     width: 60%;
     margin-left: 20%;
@@ -49,20 +50,21 @@ body::selection{
 }
 
 #searchBar{
-    width: 57%;
-    margin-left: 20%;
-    font-size: 3vw;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 175%;
+    box-sizing: border-box;
     background-color: transparent;
     font-family: 'IBM Plex Sans', sans-serif;
-    padding-left: 3%;
+    padding-left: 1%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     transition: 0.5s;
-    border-radius: 50px;
     outline: none;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-weight: bold;
 }
 
 #form{
@@ -125,7 +127,7 @@ body::selection{
 }
 
 .uploadHeader{
-    font-size: 4.5vw;
+    font-size: 300%;
     font-weight: bold;
     padding-right: 0%;
     padding-bottom: 2%;
@@ -135,13 +137,13 @@ body::selection{
 }
 
 .uploadHeaderGradient{
-    width: 40%;
+    width: 35%;
     text-align: center;
    
     font-weight: bold;
     padding: 0 0 0.6% 0;
   
-    margin: 1% 30% 5% 30%;
+    margin: 1% 32.5% 5% 32.5%;
 }
 
 .breakGradient{
@@ -152,32 +154,41 @@ body::selection{
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: 300%;
     margin-bottom: 0;
     margin-top: 5%;
 }
 
+.viewSwitcherOption{
+    font-size: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    outline: none;
+    
+}
 
-
-.viewSwitcher, .viewSwitcherOption, .viewSwitcherSelector{
-    font-size: 2vw;
+.viewSwitcherSelector{
+    font-size: 100%;
     font-family: 'IBM Plex Sans', sans-serif;
     outline: none;
 }
 
+
 .viewSwitcher{
     position: absolute;
     width: 17%;
-  
     margin-left: 75%;
     margin-bottom: 2%;
     margin-top: -5%;
     display: flex;
+    font-size: 150%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    outline: none;
+
 }
 
 .viewBy{
     margin-right: 0%;
-    width: 60%;
+    width: 70%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
 }
@@ -189,8 +200,9 @@ body::selection{
 #searchPreviewer{
     position: absolute;
     border: 1px solid white;
-    margin: -8% 22.5% 0 22.5%;
-    width: 57%;
+    margin: -9.8% 25% 0 25.5%;
+    box-sizing: border-box;
+    width: 51%;
     background-color: black;
     z-index: 999;
     max-height: 300px;
@@ -203,6 +215,7 @@ body::selection{
     padding: 2% 0 2% 2%;
     color: white;
     text-decoration: none;
+    box-sizing: border-box
     
 }
 

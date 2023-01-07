@@ -1,5 +1,5 @@
 #footerImage{
-    width: 10%;
+    width: 7%;
     border-radius: 50%;
     border: 3px solid white;
     margin-top: auto;
@@ -14,7 +14,7 @@
 }
 
 #footerBigTitle{
-    font-size: 5vw;
+    font-size: 320%;
     text-decoration: none;
     margin-top: 0;
     margin-bottom: 0;
@@ -23,41 +23,43 @@
 }
 
 #footerSubTitle{
-    font-size: 2.5vw;
+    font-size: 175%;
     text-decoration: none;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: "Quicksand", sans-serif;
+    
 }
 
 #footerRight{
     color: white;
     text-decoration: none;
     margin-left: 2%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 #footerDescription{
-    font-size: 1.8vw;
+    font-size: 125%;
     color: white;
     margin: 0 10% 0 10%;
     text-align: center;
     line-height: 1.5;
     opacity: 0.8;
+    padding-top: 0;
 }
 
 #bottomLinkHolder{
     color: white;
     display: flex;
     justify-content: center;
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
 .bottomLinks{
     display: block;
-    font-size: 2vw;
+    font-size: 135%;
     
     text-decoration: underline;
     opacity: 0.85;

@@ -15,12 +15,12 @@ function App() {
   React.useEffect(() => {
     updateColor(['lightseagreen', "#c29500"])
   })*/
-  let colorsList = ['#cfb12b', "#cf2b7d"];
+  let colorsList = ["#c4ac25", 'lightseagreen'];
 
   
 
   return (
-    <div>
+    <div style = {{width: "100%", height: "100%"}}>
         <Header firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>
         {/*<div id = "colorPickerMenu" >
           <div style = {{display: "flex"}}>
