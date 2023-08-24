@@ -32,7 +32,7 @@ export default function Footer(props){
                 </div>
                 
             </div>
-            <div id = 'copyright'  style={{backgroundImage: "linear-gradient(15deg, " + "black" + ", " + props.secondCol + "," + props.firstCol + ", black)"}}>&lt;/&gt; (coded) by <a href="https://youtube.com/pitchkeys" className="copyrightLink">PitchKeys</a>. Source code available on <a href="https://github.com/pitchkeys/pitchkeys.github.io" className="copyrightLink">Github</a>.</div>
+            <div id = 'copyright'  style={{backgroundImage: "linear-gradient(15deg, " + "black" + ", " + props.secondCol + "," + props.firstCol + ", black)"}}>&lt;/&gt; (coded) by <a href="https://youtube.com/pitchkeys" className="copyrightLink">PitchKeys</a>.</div>
         </div>
     )
 }
