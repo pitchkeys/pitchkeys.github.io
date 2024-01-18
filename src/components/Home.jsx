@@ -175,7 +175,7 @@ class Home extends Component {
         return (
             <div>
                 <div id = 'mainDisplay'>
-                    <img src="https://easymath.github.io/download-test/2020-08-05%20(3).png" alt="" id = 'topImg'/>
+                    <img src="https://micaiahcape.github.io/download-test/2020-08-05%20(3).png" alt="" id = 'topImg'/>
                     <div id = 'mainDisplayComponents'>
                         <p id = 'mainTextCenter'>{/*Give credit to YourSaviorBagel for helping w/freeway*/} The PitchKeys Website</p>
                         <p id = 'subTextCenter' style={{color: this.state.color2}}>I create piano covers and impossible piano remixes of various popular songs.</p>
