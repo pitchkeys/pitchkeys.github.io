@@ -34,13 +34,14 @@ function App() {
   </div>*/}
         
           <Routes>
-            <Route path = "/" element = {<Home firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+            {/* <Route path = "/" element = {<Home firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/admin" element = {<Admin />}></Route>
             <Route path = "/about" element = {<About firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/usage" element = {<Usage firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/credits" element = {<Credits firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/music/:id" element = {<SongFull firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
             <Route path = "/music" element = {<Search firstCol = {colorsList[0]} secondCol = {colorsList[1]}/>}></Route>
+<Route path = "*" element = {<Status404 firstCol = {colorsList[1]} secondCol = {colorsList[0]}/>}></Route> */}
             <Route path = "*" element = {<Status404 firstCol = {colorsList[1]} secondCol = {colorsList[0]}/>}></Route>
           </Routes>
           

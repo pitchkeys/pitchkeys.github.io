@@ -104,9 +104,11 @@ class Status404 extends Component {
             <div style = {this.props.display}>
                 <div id = "f" style={{backgroundImage: "linear-gradient(45deg, " + this.props.firstCol +"," + this.props.secondCol + ")"}}>404
                 </div>
-                <p id = "explanation">Hmm... the page that you requested <code style={{color: this.props.firstCol}}>{window.location.href.substring(window.location.href.lastIndexOf("/"))}</code> wasn't found or doesn't exist.</p>
+                {/*<p id = "explanation">Hmm... the page that you requested <code style={{color: this.props.firstCol}}>{window.location.href.substring(window.location.href.lastIndexOf("/"))}</code> wasn't found or doesn't exist.</p>*/}
 
-                <input autoComplete="off" type="text" id = "searchBar" placeholder = "Search something instead..." name = "searchQuery" style={{color: "white", border: "1px solid white", caretColor: this.state.color1, fontSize: "2.5vw"}} onChange = {(e) => this.onChangeSearch(e)} />
+                <p id = "explanation">Sorry, the site is temporarily nonfunctional because of discontinuation of the service the API is hosted on. Please wait while I find a new hosting provider. Thank you!</p>
+
+                {/* <input autoComplete="off" type="text" id = "searchBar" placeholder = "Search something instead..." name = "searchQuery" style={{color: "white", border: "1px solid white", caretColor: this.state.color1, fontSize: "2.5vw"}} onChange = {(e) => this.onChangeSearch(e)} />
 
                 <div style = {{display: this.determineSearchPredictorVisibility(), border: "2px solid " + this.state.color1}} id = "searchPreviewer404">
                     {this.state.searchResults.map (c => 
@@ -117,7 +119,7 @@ class Status404 extends Component {
                 <div style = {{display: "flex", justifyContent: "center", marginTop: "3%", marginBottom: "5%"}}>
                     <a href={window.location.href} className = "errorLink" style = {{color: this.props.secondCol}}>Reload the page</a>
                     <a href={"/report"} className = "errorLink" style = {{color: this.props.secondCol}}>Report broken link</a>
-                </div>
+                </div> */}
                 
             </div>
         );
