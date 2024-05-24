@@ -61,7 +61,7 @@ class SongFull extends Component {
     componentDidMount(){
         window.scrollTo(0, 0)
         if(window.location.href.charAt(window.location.href.length-12) == "/"){
-            fetch ('https://blue-clean-eel.cyclic.app/api/songs/' + window.location.href.substring(window.location.href.length-11)).then(res => res.text()).then(data => {
+            fetch ('https://pitchkeys.up.railway.app/api/songs/' + window.location.href.substring(window.location.href.length-11)).then(res => res.text()).then(data => {
                 let x = JSON.parse(data);
                 if(x.length > 0){
                     this.setState({
@@ -77,8 +77,8 @@ class SongFull extends Component {
                 }
             })
         }else{
-            console.log('https://blue-clean-eel.cyclic.app/api/songs/' + window.location.href.substring(window.location.href.length-7))
-            fetch('https://blue-clean-eel.cyclic.app/api/songs/' + window.location.href.substring(window.location.href.length-7)).then(res => res.text()).then(data => 
+            console.log('https://pitchkeys.up.railway.app/api/songs/' + window.location.href.substring(window.location.href.length-7))
+            fetch('https://pitchkeys.up.railway.app/api/songs/' + window.location.href.substring(window.location.href.length-7)).then(res => res.text()).then(data => 
             {
                 let x = JSON.parse(data);
                 if(x.length > 0){
@@ -105,7 +105,7 @@ class SongFull extends Component {
         newObject[property] = this.state.incoming.stats[property] + 1
         let d = {stats: newObject}
     
-        fetch("https://blue-clean-eel.cyclic.app/api/songs/"+ window.location.href.substring(window.location.href.length-7), {
+        fetch("https://pitchkeys.up.railway.app/api/songs/"+ window.location.href.substring(window.location.href.length-7), {
             method: 'POST',
             body: JSON.stringify(d),
             headers: {
@@ -124,7 +124,7 @@ class SongFull extends Component {
             let newObject = this.state.incoming.stats
             newObject.ratings.push(this.state.reviewValue);
             let d = {stats: newObject}
-            fetch("https://blue-clean-eel.cyclic.app/api/songs/"+ window.location.href.substring(window.location.href.length-7) + "/add", {
+            fetch("https://pitchkeys.up.railway.app/api/songs/"+ window.location.href.substring(window.location.href.length-7) + "/add", {
             method: 'POST',
             body: JSON.stringify(d),
             headers: {

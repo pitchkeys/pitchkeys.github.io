@@ -8,7 +8,7 @@
     
     React.useEffect(() => {
         
-            fetch('https://blue-clean-eel.cyclic.app/api/songs/' + props.type + "/" + props.count)
+            fetch('https://pitchkeys.up.railway.app/api/songs/' + props.type + "/" + props.count)
             .then(res => res.text())
             .then(data => {
                 
@@ -62,7 +62,7 @@ class APIget extends Component{
     componentDidMount(){
         const handler = e => this.setState({matches: e.matches})
         window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
-        fetch('https://blue-clean-eel.cyclic.app/api/songs/' + this.props.type + "/" + this.props.count)
+        fetch('https://pitchkeys.up.railway.app/api/songs/' + this.props.type + "/" + this.props.count)
         .then(res => res.text())
         .then(data => {
             this.setState({

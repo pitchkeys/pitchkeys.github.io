@@ -47,7 +47,7 @@ class FilterSongs extends Component {
     componentDidMount(){
         const handler = e => this.setState({matches: e.matches})
         window.matchMedia("(orientation: landscape)").addEventListener('change', handler)
-        fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
+        fetch('https://pitchkeys.up.railway.app/api/songs').then(res => res.text())
             .then(data => {
                 this.setState({
                     dataIn: true,
@@ -64,7 +64,7 @@ class FilterSongs extends Component {
                 this.setState({
                     initial: JSON.stringify(this.props.filters)
                 })
-                /*console.log('https://blue-clean-eel.cyclic.app/search?types=' + 
+                /*console.log('https://pitchkeys.up.railway.app/search?types=' + 
                 this.props.filters.types.join("") + 
                 "&files=" + this.props.filters.files.join("") + 
                 "&noteCount=" + this.props.filters.numericalFilters[0].moreThan + "," + this.props.filters.numericalFilters[0].lessThan + 
@@ -74,7 +74,7 @@ class FilterSongs extends Component {
                 "&numRatings=" + this.props.filters.numericalFilters[4].moreThan + "," + this.props.filters.numericalFilters[4].lessThan + 
                 "&order=" + this.props.filters.type + "," + this.props.filters.order)*/
 
-                fetch('https://blue-clean-eel.cyclic.app/search?types=' + 
+                fetch('https://pitchkeys.up.railway.app/search?types=' + 
                 this.props.filters.types.join("") + 
                 "&files=" + this.props.filters.files.join("") + 
                 "&noteCount=" + this.props.filters.numericalFilters[0].moreThan + "," + this.props.filters.numericalFilters[0].lessThan + 
@@ -228,7 +228,7 @@ class FilterSongs extends Component {
                 })
             }
         }else{       
-            fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
+            fetch('https://pitchkeys.up.railway.app/api/songs').then(res => res.text())
             .then(data => {
                 this.setState({
                     incoming: JSON.parse(data),

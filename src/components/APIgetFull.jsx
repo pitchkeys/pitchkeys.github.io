@@ -10,7 +10,7 @@ export default function APIgetFull(props){
     React.useEffect(() => {
         console.log('why isn\'t this api working')
         if(incomingDataFull.length == 0){
-            fetch('https://blue-clean-eel.cyclic.app/api/songs/')
+            fetch('https://pitchkeys.up.railway.app/api/songs/')
             .then(res => res.text())
             .then(data => {updateData(JSON.parse(data))})
         }

@@ -33,7 +33,7 @@ class Home extends Component {
         document.title = "Home | PitchKeys"
         const handler = e => this.setState({matches: e.matches})
         window.matchMedia("(orientation: landscape)").addEventListener('change', handler);
-        fetch('https://blue-clean-eel.cyclic.app/api/songs').then(res => res.text())
+        fetch('https://pitchkeys.up.railway.app/api/songs').then(res => res.text())
             .then(data => {
                 console.log('fetching data...')
                 let processedData = JSON.parse(data)
